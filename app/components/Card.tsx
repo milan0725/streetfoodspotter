@@ -1,5 +1,6 @@
-import React from "react";
+"use client";
 
+import React from "react";
 
 interface CardProps {
   children: React.ReactNode;
@@ -7,16 +8,7 @@ interface CardProps {
 
 export default function Card({ children }: CardProps) {
   return (
-    <div
-      style={{
-        borderRadius: "8px",
-        padding: "1.5rem",
-        margin: "1rem 0",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
-        background: "#a9a7a5",
-        maxWidth: "400px",
-      }}
-    >
+    <div className="rounded-xl p-6 my-4 shadow-md bg-white/80 max-w-[400px] transition-transform transform hover:-translate-y-1 hover:shadow-xl motion-reduce:transform-none">
       <div>{children}</div>
     </div>
   );
